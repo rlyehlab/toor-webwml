@@ -5,34 +5,31 @@
 #include "head.wmi" TITLE="Tor: Download for Linux/Unix" CHARSET="UTF-8"
 
     <div id="content" class="clearfix">
-			<div id="breadcrumbs"><a href="<page index>">Home &raquo; </a><a href="<page download/download-unix>">Download</a></div>
+			<div id="breadcrumbs"><a href="<page index>">Home &raquo; </a><a href="<page download/download-unix>">Descarga</a></div>
     	<div id="maincol-left">
-      	<h1>Download Tor for Unix, Linux, BSD</h1>
+      	<h1>Descargar Tor para Unix, Linux, BSD</h1>
 
         <!-- BEGIN TEASER WARNING -->
       	<div class="warning">
-          <h2>Want Tor to really work?</h2>
-            <p>...then please don't just install it and go on.
-            You need to change some of your habits, and reconfigure
-            your software! Tor by itself is <em>NOT</em> all you need
-            to maintain your anonymity. Read the <a href="<page download/download>#warning">full
-            list of warnings</a>.</p>
+          <h2>Queres que Tor se ejecute correctamente?</h2>
+            <p>...Entonces por favor no solo lo instales y sigas de largo.
+            Es necesario que cambies algunos habitos y reconfigures tu software! Tor por si mismo <em>NO</em> es todo lo que necesitas para mantener tu anonimato. Leer la <a href="<page download/download>#warning">Lista completa de advertencias</a>.</p>
         </div>
         <!-- END TEASER WARNING -->
         <table class="topforty">
 <thead>
 <tr bgcolor="#009933" style="color: white; ">
   <th colspan="2">Platform</th>
-  <th>Download Stable</th>
-  <th>Download Unstable</th>
-  <th>Installation and Configuration</th>
+  <th>Descargar la version estable</th>
+  <th>Descargar la version inestable</th>
+  <th>Instalacion y configuracion</th>
 </tr>
 </thead>
 
 <tr>
 <td align="center"><img src="$(IMGROOT)/distros/debian.png" alt="Debian"> <img src="$(IMGROOT)/distros/ubuntu.png" alt="Ubuntu"> <img src="$(IMGROOT)/distros/knoppix.png" alt="Knoppix"></td>
 <td>Debian, Ubuntu, Knoppix</td>
-<td colspan="2"><a href="<page docs/debian>">repository packages</a> </td>
+<td colspan="2"><a href="<page docs/debian>">repositorio de paquetes</a> </td>
 <td> <a href="<page docs/tor-doc-unix>">Linux/BSD/Unix</a> </td>
 </tr>
 
@@ -65,7 +62,7 @@
 <td colspan="2"><kbd>cd /usr/ports/net/tor &amp;&amp; make &amp;&amp; make install</kbd></td>
 <td>
 <a href="<page docs/tor-doc-unix>">Linux/BSD/Unix</a><br>
-<a href="<wiki>doc/OpenbsdChrootedTor">Guide to chrooting Tor in OpenBSD</a>
+<a href="<wiki>doc/OpenbsdChrootedTor">Guia para chrooting Tor en OpenBSD</a>
 </td>
 </tr>
 
@@ -94,62 +91,51 @@
 
 <div class="nb">
 <a id="packagediff"></a>
-<h2><a class="anchor" href="#packagediff">What's the difference between Stable &amp; Unstable?</a></h2>
+<h2><a class="anchor" href="#packagediff">Cual es la diferencia entre estable &amp; inestable?</a></h2>
 
 <p>
-Stable packages are released when we believe the features and code will
-not change for many months.
+Los paquetes estables son lanzados cuando creemos que el codigo y sus caracteristicas no van a cambiar durante varios meses.
 </p>
-<p>
-Unstable packages are released so you can help us test new features and bugfixes. Even though they have a higher version number
-than the stable versions listed above, there is a much higher chance of
-serious reliability and security bugs in these downloads.  Please be prepared to <a href="https://bugs.torproject.org/">report bugs</a>.
+<p>Cuando lanzamos un paquete inestable podes ayudarnos probando nuevas caracteristicas y arreglando bugs. Aunque los paquetes inestables tengan una version mas nueva que los paquetes estables listados arriba, la probabilidad de bugs y fallas de seguridad son mucho mayores en los inestables. Preparate para <a href="https://bugs.torproject.org/">reportar bugs</a>.
 </p>
 </div>
 
 <div class="underline"></div>
 <div class="nb">
 <p>
-Tor is distributed as <a href="http://www.fsf.org/">Free Software</a>
-under the <a href="<gitblob>LICENSE">3-clause BSD license</a>.
+Tor se distribuye <a href="http://www.fsf.org/">Software Libre</a>
+Bajo <a href="<gitblob>LICENSE">licencia 3-clause BSD</a>.
 </p>
 <p>
-There is no fee for installing Tor, or using the Tor network, but
-if you want Tor to become faster and more usable please consider
-<a href="<page donate/donate-download>">making a tax-deductible donation to The Tor Project</a>.
+Instalar Tor no posee costo alguno, tampoco tiene costo utilizar la red Tor. Pero si te gustaria que Tor funcione mas rapido y de forma mas operativa por favor ten en cuenta
+<a href="<page donate/donate-download>">Realizar una donacion libre de impuestos a Proyecto Tor</a>.
 </p>
 </div>
 
 <div class="underline"></div>
 <div class="nb">
 <p>
-To keep informed of security advisories and new stable releases, subscribe
-to the <a href="https://lists.torproject.org/cgi-bin/mailman/listinfo/tor-announce">tor-announce
-mailing list</a> (you will be asked to confirm via email). You can also
-<a href="http://rss.gmane.org/gmane.network.onion-routing.announce">watch
-the list's RSS feed</a>.
+Para manternte informado sobre advertencias de seguridad y lanzamientos de versiones estables, suscribite a <a href="https://lists.torproject.org/cgi-bin/mailman/listinfo/tor-announce">Lista de correo de anuncios de tor</a> (Se pedira confirmacion via mail). Tambien podes suscribirte a
+<a href="http://rss.gmane.org/gmane.network.onion-routing.announce">Seguir RSS feed</a>.
 </p>
 </div>
 
 <p>
-If you would like to research any past release of Tor source, packages,
-or other binaries, see <a href="https://archive.torproject.org/">the
-archive</a>.
+Si queres investigar sobre las versiones anteriores de Tor, paquetes u otros binarios ingresar a<a href="https://archive.torproject.org/">el archivo</a>.
 </p>
 
 <div class="nb">
 <p>
-If you have trouble downloading Tor from this site, here is a <a
-href="<page getinvolved/mirrors>">list of sites mirroring the Tor site</a>.
+Si tenes problemas con la descarga de Tor en este sito, podes dirigirte a <a
+href="<page getinvolved/mirrors>">Listado de mirrors de Tor</a>.
 </p>
 
 <a id="ChangeLog"></a>
 <a id="Stable"></a>
 <a id="Testing"></a>
 <p>
-For a list of what has changed in each stable Tor release, see the
-<a href="<gitblob>ReleaseNotes<cgitstable>">ReleaseNotes</a>. For a list of
-changes in both stable and development versions, see the
+Para obtener el listado de los cambios para cada version estable de Tor consultar 
+<a href="<gitblob>ReleaseNotes<cgitstable>">NotasDeLanzamiento</a>. Para obtener la lista de los cambios en la version estable y las versiones en desarrollo consultar
 <a href="<gitblob>ChangeLog">ChangeLog</a>.
 </p>
 </div>
@@ -158,18 +144,17 @@ changes in both stable and development versions, see the
       <div id="sidecol-right">
         <div class="img-shadow">
           <div class="infoblock">
-          	<h2>Verify Signatures</h2>
-            <p>Verify your downloads with our GPG signatures:</p>
-            <a href="<page docs/verifying-signatures>">Read how to
-verify the signatures</a>.
+          	<h2>Firmas verificadas</h2>
+            <p>Verifica tus descargas con nuestra firma GPG:</p>
+            <a href="<page docs/verifying-signatures>">Leer sobre como verificar las firmas</a>.
           </div>
         </div>
         <!-- END INFOBLOCK -->
         <div class="img-shadow">
         	<div class="sidenav-sub">
-          	<h2>Having Trouble?</h2>
+          	<h2>Tenes un problema?</h2>
           	<ul>
-            	<li class="dropdown"><a href="#packagediff">What are the differences between stable and unstable downloads?</a></li>
+            	<li class="dropdown"><a href="#packagediff">Cuales son las diferencias entre las descargas estables y las inestables?</a></li>
             </ul>
           </div>
       	</div>
