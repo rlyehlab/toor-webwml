@@ -55,7 +55,7 @@
 
 	  <h2>Navegador Tor</h2>
 	  <em>Versión <version-torbrowserbundle> (<releasedate-torbrowserbundle>) - Windows 10, 8, 7, Vista, y XP</em>
-	  <p>Todo lo que necesitas para navegar segura la web. <a href="<page projects/torbrowser>">Aprendé mas &raquo;</a></p>
+	  <p>Todo lo que necesitas para navegar de forma segura Internet. <a href="<page projects/torbrowser>">Aprendé mas &raquo;</a></p>
 	</div>
 <!-- EXPERT BUNDLE -->
 	<div class="package">
@@ -108,7 +108,7 @@
 
 	  <h2>Navegador Tor</h2>
 	  <em>Versión <version-torbrowserbundleosx64> (<releasedate-torbrowserbundleosx64>)- OS X Intel</em>
-	  <p>Todo lo que necesitas para navegar segura la web. Este paquete no requiere instalación. Solo extraerlo y ejecutarlo <a href="<page projects/torbrowser>">Aprendé Más &raquo;</a></p>
+	  <p>Todo lo que necesitas para navegar de forma segura Internet. Este paquete no requiere instalación. Solo extraerlo y ejecutarlo <a href="<page projects/torbrowser>">Aprendé Más &raquo;</a></p>
 	</div>
   </div>
  <!-- END OS X -->
@@ -146,7 +146,7 @@
 
 	  <h2>Navegador Tor</h2>
 	  <em>Versión <version-torbrowserbundlelinux32> (<releasedate-torbrowserbundlelinux32>) - GNU/Linux, BSD, y Unix</em>
-	  <p>Todo lo que necesitas para navegar segura la web. Este paquete no requiere instalación. Solo extraerlo y ejecutarlo <a href="<page projects/torbrowser>">Aprendé Más &raquo;</a></p>
+	  <p>Todo lo que necesitas para navegar de forma segura Internet. Este paquete no requiere instalación. Solo extraerlo y ejecutarlo <a href="<page projects/torbrowser>">Aprendé Más &raquo;</a></p>
 <!-- repo packages -->
 	<div class="package" style="border-bottom: 0px;">
 	  <div class="downloads">
@@ -212,109 +212,91 @@ href="<page download/download-unix>">Repositorios de Tor.</a>
 	<p>Necesitas cambiar algunos de tus hábitos, algunas cosas no funcionarán exactamente como estas acostumbrada.</p>
 
 <ol>
-<li><b>Usá el Navegador Tor</b>
+  <li><b>Usá el Navegador Tor</b>
+  <p>Tor no protege todo el trafico de Internet de tu computadora cuando
+  lo ejecutás. Tor solo protege las aplicaciones que están correctamente
+  configuradas para enviar su trafico a  través de Tor. Para evitar
+  problemas con La configuración de Tor, nosotras recomendamos que uses el
+  <a href="<page projects/torbrowser>">Navegador Tor</a>. Este esta
+  pre-configurado para proteger tu privacidad y anonimato en la web, siempre y cuando estés
+  navegando con el Navegador Tor. En casi todos los casos configurar un navegador
+  de cualquier otra forma es posiblemente insegura para usarse con Tor.</p>
+  </li>
+  <li><b>No uses torrent sobre Tor</b>
+  <p>
+  El intercambio de archivos usando Torrent ignora la configuración de proxy
+  y genera conexiones directas incluso cuando se las configura para usar Tor.
+  Incluso cuando se las configura para usar Tor vas a filtrar tu IP real en las
+  peticiones GET al tracker, por que así es como funciona el protocolo Torrent.
+  No solo  <a
+  href="https://blog.torproject.org/blog/bittorrent-over-tor-isnt-good-idea">
+  desanonimizas tu trafico de torrent y tu trafico web</a> si no que aparte
+  ralentizas la red Tor para el resto de la gente.
+  </p>
+  </li>
 
-<p>
-Tor no protege todo el trafico de tu computadora cuando lo ejecutás. Tor solo protege el de aquellas aplicaciones que estén correctamente configuradas para enviarlo a través de Tor. Para evitar problemas con la configuración de Tor, recomendamos enfáticamente  que uses el <a href="<page projects/torbrowser>"> Navegador Tor </a>. Este esta preconfigurado para proteger tu privacidad y anonimato en la web siempre y cuando lo estés usando para navegar. Casi cualquier otra configuración en el navegador es posiblemente insegura para usarse con Tor.
+  <li><b>No habilites ni instales plugins en el navegador</b>
+  <p>El Navegador Tor bloquea plugins como Flash, RealPlayer, Quicktime
+  	y otros: los plugins pueden manipular el navegador a revelar tu direccion IP
+  	Tampoco recomendamos  instalar addons adicionales o plugins en el Navegador Tor,
+  	dado que pueden bypassear Tor y herir tu anonimidad y privacidad.</p>
+  </li>
 
 
-</p>
 
+  <li><b>Usá versiones HTTPS de los Sitios</b>
+  <p>Tor va a cifrar todo tu trafico <a
+  href="<page about/overview>#thesolution">desde y
+  dentro de la red Tor</a>, pero el cifrado de tu trafico hasta el website depende
+  del sitio. Para ayudar a asegurar un cifrado privado al website, el  Navegador
+  Tor incluye<a href="https://www.eff.org/https-everywhere">HTTPS Everywhere</a>
+  para forzar el uso de HTTPS con los sitios que lo soportan.
+  to force the use of HTTPS encryption with major websites that
+  Sin embargo, deberías seguir viendo la barra url para
+  asegurar que lo sitios a los que les provees información  te muestran <a
+  href="https://support.mozilla.com/en-US/kb/Site%20Identity%20Button">un botón azul o verde
+  </a>, que incluyen <b>https://</b> en la URL, y que muestran el nombre correcto para el sitio.
+  Mira también el sitio interactivo de la EFF como
+   <a href="https://www.eff.org/pages/tor-and-https">Tor
+  y HTTPS se relaiconan</a>.
+  </p>
+  </li>
+
+  <li><b>No abras documentos, descargados de Tor mientras Tor esta online</b>
+  <p>El navegador Tor te avisa antes de abrir cualquier documento
+  que tiene que abrirse con una aplicación externa. <b>NO IGNORES
+  ESTA ADVERTENCIA</b>.  Tenes que ser super cuidadoso descargando
+  documentos a través de Tor (Especialmente .DOC y .PDF, a menos que uses
+  el visor PDF que viene incorporado en el navegador Tor) como estos
+  documentos pueden contener recursos ubicados en Internet que se van a descargar
+  por fuera de la red Tor. Esto va a revelar tu dirección IP no torificada.
+  Si tenes que trabajar con documentos DOC o PDF, te recomendamos usar una computadora
+  desconectada, con  <ahref="https://www.virtualbox.org/">VirtualBox</a>
+  y usarla con una <a href="http://virtualboxes.org/">maquina virtual</a> con
+  las redes deshabilitadas, o usar <a href="https://tails.boum.org/">Tails</a>.
+  Bajo ninguna circunstancia es seguro usar  <a
+  href="https://blog.torproject.org/blog/bittorrent-over-tor-isnt-good-idea">BitTorrent
+  y Tor</a>
+  </li>
+
+
+  <li><b>Usa puentes y/o encontrá compañia</b>
+  <p> Tor trata de prevenir que los atacantes aprendan a que sitio estas
+  accediendo. Sin embargo, por default, no previene que alguien analizando
+  tu trafico sepa que estas usando Tor. Si esto te importa, podes reducir
+  el riesgo configurando  a Tor para que se conecte con un
+  <a href="<page docs/bridges>">Tor bridge relay</a> en lugar de conectarte
+  directamente a la red publica de Tor.  La mejor protección es un enfoque social:
+  mientras mas usarios de Tor haya cerca tuyo y mientras mas
+  <a href="<page about/torusers>">diversos</a> sus intereses, menos
+  peligroso es ser uno de ellos. ¡Convence a otra gente de usar Tor!</p>
 </li>
-
-<li><b>No uses Torrent sobre Tor</b>
-<p>
-Se ha observado que las aplicaciones para compartir archivos por Torrent ignoran a configuración de proxy y hacen conexiones directas incluso cuando se las configura para usar Tor, estas aplicaciones envian a menudo tu dirección IP real al rastreador en las peticiones GET, por que esta es la manera en la que trabaja el protocolo Torrent. No solo  <a
-href="https://blog.torproject.org/blog/bittorrent-over-tor-isnt-good-idea"> desanonimizas tu trafico de torrent y tu trafico web </a> si no que congestionas la red de Tor para todas las demás.
-</p>
-</li>
-
-<li><b>Don't enable or install browser plugins</b>
-
-<p>
-
-Navegador Tor will block browser plugins such as Flash, RealPlayer,
-Quicktime, and others: they can be manipulated into revealing your IP address.
-Similarly, we do not recommend installing additional addons or plugins into
-Navegador Tor, as these may bypass Tor or otherwise harm your anonymity and
-privacy.
-
-</p>
-
-</li>
-
-<li><b>Use HTTPS versions of websites</b>
-
-<p>
-
-Tor will encrypt your traffic
-<a href="<page about/overview>#thesolution">to and
-within the Tor network</a>, but the encryption of your traffic to the final
-destination website depends upon on that website. To help ensure private
-encryption to websites, Navegador Tor includes <a
-href="https://www.eff.org/https-everywhere">HTTPS Everywhere</a> to force the
-use of HTTPS encryption with major websites that support it. However, you
-should still watch the browser URL bar to ensure that websites you provide
-sensitive information to display a
-<a href="https://support.mozilla.com/en-US/kb/Site%20Identity%20Button">blue or
-green URL bar button</a>, include <b>https://</b> in the URL, and display the
-proper expected name for the website. Also see EFF's interactive page
-explaining <a href="https://www.eff.org/pages/tor-and-https">how Tor
-and HTTPS relate</a>.
-
-</p>
-
-</li>
-
-<li><b>Don't open documents downloaded through Tor while online</b>
-
-<p>
-
-Navegador Tor will warn you before automatically opening documents that are
-handled by external applications. <b>DO NOT IGNORE THIS WARNING</b>.  You
-should be very careful when downloading documents via Tor (especially DOC and
-PDF files, unless you use the PDF viewer that's built into Navegador Tor) as
-these documents can contain Internet resources that will be downloaded outside
-of Tor by the application that opens them. This will reveal your non-Tor IP
-address. If you must work with DOC and/or PDF files, we strongly recommend
-either using a disconnected computer,
-downloading the free <a href="https://www.virtualbox.org/">VirtualBox</a> and
-using it with a <a href="http://virtualboxes.org/">virtual machine image</a>
-with networking disabled, or using <a href="https://tails.boum.org/">Tails</a>.
-Under no circumstances is it safe to use
-<a href="https://blog.torproject.org/blog/bittorrent-over-tor-isnt-good-idea">BitTorrent
-and Tor</a> together, however.
-
-</p>
-
-</li>
-
-<li><b>Use bridges and/or find company</b>
-
-<p>
-
-Tor tries to prevent attackers from learning what destination websites you
-connect to. However, by default, it does not prevent somebody watching your Internet
-traffic from learning that you're using Tor. If this matters to you, you can
-reduce this risk by configuring Tor to use a <a href="<page docs/bridges>">Tor
-bridge relay</a> rather than connecting directly to the public Tor network.
-Ultimately the best protection is a social approach: the more Tor
-users there are near you and the more
-<a href="<page about/torusers>">diverse</a> their interests, the less
-dangerous it will be that you are one of them. Convince other people to use
-Tor, too!
-
-</p>
-
-</li>
-
 </ol>
 <br>
 <p>
-Be smart and learn more. Understand what Tor does and does not offer.
-This list of pitfalls isn't complete, and we need your
-help <a href="<page getinvolved/volunteer>#Documentation">identifying and documenting
-all the issues</a>.
+Se inteligente y aprende mas. Entendé que ofrece Tor y que no ofrece.
+Esta lista de obtaculos no es completa, y necesitamos tu ayuda <a href="<page getinvolved/volunteer>#Documentation">
+identificando y documentando todos los problemas </a>.
 </p>
 </div>
 <!-- END WARNING -->
@@ -324,7 +306,7 @@ all the issues</a>.
 <div id="sidecol-right">
 <div class="img-shadow sidenav">
 <div class="sidenav-sub">
-<h2>Jump To:</h2>
+<h2>Saltar a:</h2>
 <ul>
 <li class="dropdown"><a href="<page
 download/download>#windows">Microsoft Windows</a></li>
@@ -334,8 +316,7 @@ X</a></li>
 download/download>#linux">Linux/Unix</a></li>
 <li class="dropdown"><a href="<page
 download/download>#smartphone">Smartphones</a></li>
-<li class="dropdown"><a href="<page download/download>#source">Source
-Code</a></li>
+<li class="dropdown"><a href="<page download/download>#source">Codigo fuente</a></li>
 </ul>
 </div>
 </div>
@@ -345,9 +326,9 @@ Code</a></li>
 <!-- START INFO -->
 <div class="img-shadow">
 <div class="sidenav-sub">
-<h2>Having Trouble?</h2>
+  <h2>¿Tenes Algun Problema?</h2>
 <ul>
-<li class="dropdown"><a href="<page docs/documentation>">Read the fine manuals</a></li>
+<li class="dropdown"><a href="<page docs/documentation>">¡Leé la documentacion!</a></li>
 </ul>
 </div>
 </div>
